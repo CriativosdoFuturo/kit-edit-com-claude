@@ -11,8 +11,10 @@ Na aba **Code** do app do Claude, mande este link junto com o prompt da aula:
 
 O Claude cria a pasta **Documentos\Edit com Claude**, baixa o kit e prepara tudo.
 
-**Conferir:** abra uma conversa nova na pasta **Edit com Claude** e digite **/**. Na lista, procure
-**/decupagem-pt**, **/trombino**, **/edit-video** e **/hyperframes**.
+**Conferir:** abra uma conversa nova no Claude (em qualquer pasta) e digite **/trombino**.
+Aparecem todas as skills do curso juntas, como **/trombino-decupagem-pt**,
+**/trombino-edit-video** e **/trombino-hyperframes**. As skills valem em qualquer conversa; os seus
+projetos ficam em **Documentos\Edit com Claude\video-projects**.
 
 ## 2. Conectar o seu editor (aula 03)
 
