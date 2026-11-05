@@ -13,7 +13,7 @@ aparecerem.
 
 | Parte | Aula | O que instala |
 |---|---|---|
-| **1. Kit e skills** | 03 | pasta do curso, as 16 skills (valendo em qualquer conversa) e a decupagem (Python, FFmpeg) |
+| **1. Kit e skills** | 03 | pasta do curso, as 17 skills (valendo em qualquer conversa) e a decupagem (Python, FFmpeg) |
 | **2. HyperFrames** | 06 | o motor de animação (Node) e o teste de 8 segundos |
 | **Atualizar** | quando avisarmos | a versão nova do kit, sem perder seus projetos |
 
@@ -101,7 +101,7 @@ A conexão com o editor (MCP) tem um link próprio em cada editor. O do Premiere
    - Windows: `& "PASTA\.venv\Scripts\python.exe" -I "PASTA\scripts\instalar_skills_globais.py"`
    - Mac: `"PASTA/.venv/bin/python" -I "PASTA/scripts/instalar_skills_globais.py"`
 
-   O script copia as 16 skills para as skills pessoais do Claude (`~/.claude/skills/`), para elas
+   O script copia as 17 skills para as skills pessoais do Claude (`~/.claude/skills/`), para elas
    aparecerem em **qualquer** conversa. Cada cópia sabe onde está a `PASTA`, e é lá que ficam os
    programas, as regras do curso e os projetos. O script também libera o acesso fixo do Claude à
    `PASTA` (em `~/.claude/settings.json`, com backup em `PASTA/backups/`), para o aluno não ter
@@ -112,8 +112,8 @@ A conexão com o editor (MCP) tem um link próprio em cada editor. O do Premiere
      funcionam mesmo assim; o Claude só vai pedir permissão para usar a pasta do curso.
 
 7. **Confira:**
-   - `.claude/skills/` da `PASTA` tem 16 pastas, cada uma com `SKILL.md`;
-   - `~/.claude/skills/` tem as 16 pastas do kit (cada uma com `.kit-edit-com-claude.json`);
+   - `.claude/skills/` da `PASTA` tem 17 pastas, cada uma com `SKILL.md`;
+   - `~/.claude/skills/` tem as 17 pastas do kit (cada uma com `.kit-edit-com-claude.json`);
    - `.venv` importa `faster_whisper`, `transformers` e `torch` sem erro;
    - `ffmpeg -version` responde.
 
@@ -122,8 +122,8 @@ A conexão com o editor (MCP) tem um link próprio em cada editor. O do Premiere
    - o caminho da `PASTA` (é onde ficam os projetos dele);
    - **o próximo passo:** abrir uma **conversa nova** no Claude, na aba Code. As skills do curso
      aparecem em qualquer conversa;
-   - **como conferir:** nessa conversa nova, digitar **/trombino**. Aparecem todas as skills do
-     curso juntas, como **/trombino-decupagem-pt**, **/trombino-edit-video** e **/trombino-hyperframes**. Se não aparecerem, digitar
+   - **como conferir:** nessa conversa nova, digitar **/trombs**. Aparecem todas as skills do
+     curso juntas, como **/trombs-decupagem-pt**, **/trombs-edit-video** e **/trombs-hyperframes**. Se não aparecerem, digitar
      **/reload-skills** ou abrir outra conversa nova;
    - que a conexão com o editor (MCP) é o próximo passo da aula.
 
