@@ -1,6 +1,6 @@
 [CmdletBinding()]
 param([string]$NodePath,[string]$Root,[string]$StageRoot)
-# Premiere MCP para o Claude Code (claude-1.0.0) - preparacao opcional no Windows.
+# Premiere MCP para o Claude Code (claude-1.0.1) - preparacao opcional no Windows.
 # Baixa o pacote do curso, confere o SHA-256, instala e registra no Claude. Nao usa Codex.
 $ErrorActionPreference='Stop'
 $TaskIdentity=[Security.Principal.WindowsIdentity]::GetCurrent().Name
@@ -30,7 +30,7 @@ if(-not $NodePath){
  $NodePath=Join-Path $TaskStage "$Name/node.exe"
 }
 $Bundle=Join-Path $TaskStage 'setup.zip'
-DownloadVerified 'https://raw.githubusercontent.com/CriativosdoFuturo/kit-edit-com-claude/main/premiere-setup-claude-1.0.0.zip' $Bundle 'a7b9048b07de705bb0f3fe81888af04e8a97f3e18f2a4b21ef70c49c65049ca5'
+DownloadVerified 'https://raw.githubusercontent.com/CriativosdoFuturo/kit-edit-com-claude/main/premiere-setup-claude-1.0.1.zip' $Bundle '6d552d0ca052170c125c59cfc88fc776529ab7c159936ee7984449ec2035c07b'
 $Extract=Join-Path $TaskStage 'setup';Expand-Archive -LiteralPath $Bundle -DestinationPath $Extract
 & $NodePath (Join-Path $Extract 'install.mjs') --root $Root
 # 3 = ja existe instalacao do curso anterior: so liga ao Claude, sem baixar nada.
