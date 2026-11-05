@@ -1,6 +1,6 @@
 # Conectar o Adobe Premiere ao Claude Code
 
-**Curso Edit com Claude Code · Trombino / Criativos do Futuro · pacote `claude-1.0.0`**
+**Curso Edit com Claude Code · Trombino / Criativos do Futuro · pacote `claude-1.0.1`**
 
 Leitura direta, sem a interface do GitHub:
 https://raw.githubusercontent.com/CriativosdoFuturo/kit-edit-com-claude/main/INSTALAR-PREMIERE.md
@@ -32,9 +32,14 @@ frase. Se precisar de uma ação dele, peça uma ação por vez e espere a confi
 
 1. Confirme que está no Windows ou no Mac do aluno, onde o Premiere está instalado. Anote o sistema,
    a arquitetura e a versão do Premiere. Não instale nem atualize o Premiere.
-2. Veja se o Claude já tem um MCP chamado `premiere_pro_trombino` (arquivo `~/.claude.json`, chave
+2. Veja se o Claude já tem um MCP chamado `trombs-premiere` (arquivo `~/.claude.json`, chave
    `mcpServers`). Se tiver, teste se ele funciona antes de qualquer coisa. Se funcionar, use esse e
    pare aqui: não reinstale nem substitua.
+   - Se houver um MCP com o nome antigo, `premiere_pro_trombino`, que aponta para a pasta da
+     instalação do curso (passo 3), o instalador só troca o nome dele para `trombs-premiere`, com
+     backup. Rode o instalador normalmente.
+   - Se o `premiere_pro_trombino` apontar para outro lugar, é um MCP de outra origem: não mexa nele.
+     Pergunte ao aluno se quer manter os dois antes de instalar.
 3. Veja se já existe a pasta da instalação do curso anterior:
    - Windows: `%LOCALAPPDATA%\CriativosdoFuturo\PremiereMCP\installation.json`
    - Mac: `~/Library/Application Support/CriativosdoFuturo/PremiereMCP/installation.json`
@@ -48,11 +53,11 @@ frase. Se precisar de uma ação dele, peça uma ação por vez e espere a confi
 
 O pacote fica neste repositório:
 
-- [premiere-setup-claude-1.0.0.zip](./premiere-setup-claude-1.0.0.zip)
-- SHA-256: `a7b9048b07de705bb0f3fe81888af04e8a97f3e18f2a4b21ef70c49c65049ca5` (também em [premiere-setup-claude-1.0.0.sha256](./premiere-setup-claude-1.0.0.sha256))
+- [premiere-setup-claude-1.0.1.zip](./premiere-setup-claude-1.0.1.zip)
+- SHA-256: `6d552d0ca052170c125c59cfc88fc776529ab7c159936ee7984449ec2035c07b` (também em [premiere-setup-claude-1.0.1.sha256](./premiere-setup-claude-1.0.1.sha256))
 
 Download direto:
-`https://raw.githubusercontent.com/CriativosdoFuturo/kit-edit-com-claude/main/premiere-setup-claude-1.0.0.zip`
+`https://raw.githubusercontent.com/CriativosdoFuturo/kit-edit-com-claude/main/premiere-setup-claude-1.0.1.zip`
 
 **Caminho principal, com Node 22.19+ ou 24.5+ já instalado:**
 
@@ -80,7 +85,7 @@ Download direto:
 - baixa FFmpeg, Whisper e o modelo de voz, conferindo o hash de cada um;
 - copia o painel MCP Bridge (CEP, assinado) para as extensões da Adobe do usuário;
 - liga a opção `PlayerDebugMode` da Adobe, guardando os valores anteriores;
-- faz backup do `~/.claude.json` e acrescenta só a entrada `premiere_pro_trombino`.
+- faz backup do `~/.claude.json` e acrescenta só a entrada `trombs-premiere`.
 
 Ele não mexe em outros MCPs, nem no Codex, nem nas proteções do sistema.
 
@@ -101,7 +106,7 @@ Na pasta instalada, com o Node dela (`runtime/node.exe` no Windows, `runtime/nod
 Não diga que todas as funções de edição foram testadas.
 
 O MCP novo aparece nas **conversas novas** do Claude. No fim, peça ao aluno para abrir uma conversa
-nova na pasta do curso e escrever: "confere se o MCP do Premiere está conectado".
+nova e escrever: **/trombs-premiere confere se o Premiere está conectado**.
 
 ### 4. Se der erro
 
@@ -119,6 +124,9 @@ nova na pasta do curso e escrever: "confere se o MCP do Premiere está conectado
 
 ## Versão
 
+`claude-1.0.1` (05/11/2026): o MCP passou a se chamar `trombs-premiere`, para ficar junto das
+skills do curso (`/trombs...`). Instalações da `claude-1.0.0` têm o nome trocado sem reinstalar.
+
 `claude-1.0.0` (04/11/2026), adaptado do pacote 1.3.5 do curso anterior. É o mesmo servidor
 (`adobe-premiere-pro-mcp` 1.2.8, CEP), o mesmo painel assinado e a mesma transcrição local. O que
 mudou: o registro é feito no Claude Code, e uma instalação existente é reaproveitada sem baixar nada.
@@ -127,6 +135,8 @@ mudou: o registro é feito no Claude Code, e uma instalação existente é reapr
 
 - conferência e registro numa configuração de teste;
 - recusa em sobrescrever um MCP já existente;
+- troca do nome antigo para `trombs-premiere` só quando a entrada é da instalação do curso
+  (preservando o resto da configuração), e nenhuma mudança num MCP de outra origem;
 - servidor iniciando e mostrando o catálogo de ferramentas.
 
 **Ainda não testado:** instalação completa num computador limpo e conexão com o Premiere por este
