@@ -11,9 +11,9 @@ Na aba **Code** do app do Claude, mande este link junto com o prompt da aula:
 
 O Claude cria a pasta **Documentos\Edit com Claude**, baixa o kit e prepara tudo.
 
-**Conferir:** abra uma conversa nova no Claude (em qualquer pasta) e digite **/trombino**.
-Aparecem todas as skills do curso juntas, como **/trombino-decupagem-pt**,
-**/trombino-edit-video** e **/trombino-hyperframes**. As skills valem em qualquer conversa; os seus
+**Conferir:** abra uma conversa nova no Claude (em qualquer pasta) e digite **/trombs**.
+Aparecem todas as skills do curso juntas, como **/trombs-decupagem-pt**,
+**/trombs-edit-video** e **/trombs-hyperframes**. As skills valem em qualquer conversa; os seus
 projetos ficam em **Documentos\Edit com Claude\video-projects**.
 
 ## 2. Conectar o seu editor (aula 03)
@@ -40,7 +40,7 @@ teste de 8 segundos (Parte 2 do [INSTALAR.md](./INSTALAR.md)).
 | [INSTALAR.md](./INSTALAR.md) | passo a passo que o Claude segue para instalar e atualizar o kit |
 | [kit-edit-com-claude.zip](./kit-edit-com-claude.zip) | o kit ([SHA-256](./kit-edit-com-claude.sha256)) |
 | [INSTALAR-PREMIERE.md](./INSTALAR-PREMIERE.md) | conexão do Premiere com o Claude |
-| [premiere-setup-claude-1.0.0.zip](./premiere-setup-claude-1.0.0.zip) | pacote do Premiere ([SHA-256](./premiere-setup-claude-1.0.0.sha256)) |
+| [premiere-setup-claude-1.0.1.zip](./premiere-setup-claude-1.0.1.zip) | pacote do Premiere ([SHA-256](./premiere-setup-claude-1.0.1.sha256)) |
 | [instalar-premiere.ps1](./instalar-premiere.ps1) / [instalar-premiere-mac.sh](./instalar-premiere-mac.sh) | scripts opcionais do Premiere |
 
 ## Deu erro?
