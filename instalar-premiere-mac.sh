@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Premiere MCP para o Claude Code (claude-1.0.0) - preparacao no Mac. Nao usa Codex.
+# Premiere MCP para o Claude Code (claude-1.0.1) - preparacao no Mac. Nao usa Codex.
 set -euo pipefail
 [[ "$(uname -s)" == Darwin ]] || { echo 'Use o Mac onde o Premiere esta instalado.'; exit 1; }
 STAGE="$(mktemp -d)"
@@ -12,8 +12,8 @@ if [[ -z "$NODE_BIN" ]]; then
  tar -xzf "$STAGE/node.tar.gz" -C "$STAGE"
  NODE_BIN="$STAGE/node-v24.21.0-darwin-$ARCH/bin/node"
 fi
-curl --fail --location --retry 3 'https://raw.githubusercontent.com/CriativosdoFuturo/kit-edit-com-claude/main/premiere-setup-claude-1.0.0.zip' -o "$STAGE/setup.zip"
-[[ "$(shasum -a 256 "$STAGE/setup.zip" | awk '{print $1}')" == "a7b9048b07de705bb0f3fe81888af04e8a97f3e18f2a4b21ef70c49c65049ca5" ]] || { echo 'SHA256 divergente; nao executar.'; exit 1; }
+curl --fail --location --retry 3 'https://raw.githubusercontent.com/CriativosdoFuturo/kit-edit-com-claude/main/premiere-setup-claude-1.0.1.zip' -o "$STAGE/setup.zip"
+[[ "$(shasum -a 256 "$STAGE/setup.zip" | awk '{print $1}')" == "6d552d0ca052170c125c59cfc88fc776529ab7c159936ee7984449ec2035c07b" ]] || { echo 'SHA256 divergente; nao executar.'; exit 1; }
 mkdir "$STAGE/setup"; unzip -q "$STAGE/setup.zip" -d "$STAGE/setup"
 set +e
 "$NODE_BIN" "$STAGE/setup/install.mjs"; CODE=$?
